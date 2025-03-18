@@ -31,6 +31,9 @@
         .swal2-confirm:hover {
             background-color: #00b359;
         }
+	    .swal2-cancel:hover {
+            background-color: #FF0000;
+	    }
         /* Custom Input Animation */
         .input-field {
             transition: all 0.3s ease;
@@ -209,7 +212,7 @@ async function sendFlexMessage() {
                                 contents: [
                                     {
                                         type: 'text',
-                                        text: 'Phone',
+                                        text: 'ถอนจำนวน',
                                         size: 'sm',
                                         color: '#555555',
                                         flex: 1
@@ -392,7 +395,7 @@ submitBtn.addEventListener('click', async (event) => {
 
             Swal.fire({
                 title: 'Success!',
-                text: 'สมัครสมาชิกสำเร็จ!',
+                text: 'ส่งคำขอสำเร็จ!',
                 icon: 'success',
                 confirmButtonText: 'Closed',
             }).then((result) => {
@@ -421,11 +424,11 @@ submitBtn.addEventListener('click', async (event) => {
 // ฟังก์ชันสำหรับแสดงกล่องยืนยัน
 async function showConfirmationDialog() {
     const confirmation = await Swal.fire({
-        title: 'ยืนยันการสมัครสมาชิก',
-        text: 'คุณต้องการสมัครสมาชิก?',
+        title: 'ยืนยันการถอนพ้อยท์',
+        text: 'คุณต้องการถอนพ้อยท์?',
         icon: 'question',
         showCancelButton: true,
-        confirmButtonText: 'ใช่, สมัครสมาชิก!',
+        confirmButtonText: 'ใช่,ดำเนินการต่อ!',
         cancelButtonText: 'ไม่, ยกเลิก'
     });
 
